@@ -1,0 +1,118 @@
+.hidden {
+  display: none !important;
+}
+
+.game-dialog {
+  width: 80%;
+  height: 80%;
+  line-height: 1.5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background-color: #e3f2fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.btn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: inherit;
+  line-height: inherit;
+  background-color: #bbdefb;
+  position: relative;
+  font-family: Consolas, Menlo, sans-serif;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #673ab7;
+  transition: background-color 500ms ease-in, color 250ms linear;
+}
+
+.btn::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  opacity: 0.7;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: inherit;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.btn:hover::before {
+  opacity: 0;
+  transition: width 400ms ease-out, opacity 500ms ease-in-out;
+  width: 100%;
+}
+
+.clouds, .fuels, .stars, .birds, .bullets {
+  position: absolute;
+}
+
+.clouds {
+  width: 128px;
+  height: 64px;
+  z-index: 101;
+}
+
+.fuels,
+.stars {
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+}
+
+.fuels {
+  background: url("../assets/icons/parachute.png") no-repeat center;
+}
+
+.stars {
+  background: url("../assets/icons/stars.gif") no-repeat center;
+}
+
+.bullets {
+  width: 16px;
+  height: 5px;
+  background-color: #ff9900;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: 99;
+}
+
+.birds {
+  width: 48px;
+  height: 32px;
+  z-index: 98;
+}
+
+.move-to-icon {
+  animation: MoveTo ease-in-out 500ms forwards;
+}
+
+.pause-css-animation {
+  animation-play-state: paused !important;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@keyframes MoveTo {
+  to {
+    left: var(--to-x);
+    top: var(--to-y);
+  }
+}

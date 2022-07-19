@@ -1,0 +1,14 @@
+@import "default.css";
+@import "globals.css";
+@import "gameGuide.css";
+@import "gameChunk.css";
+@import "gameEnding.css";
+@import "gameHistory.css";
+
+#root {
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  background-color: #90caf9;
+  overflow: hidden;
+}

@@ -1,0 +1,55 @@
+#game-chunk {
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#plane {
+  background: url("../assets/icons/plane.png") no-repeat center;
+  width: 54px;
+  height: 48px;
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 24px);
+  z-index: 100;
+}
+
+#duration {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 199;
+}
+
+#status i {
+  position: unset;
+  margin-right: 4px;
+}
+
+#status > div {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+}
+
+#status > div:first-child {
+  bottom: 12px;
+}
+
+#status > div:last-child {
+  bottom: 52px;
+}
+
+#controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  z-index: 199;
+}
+
+#controls > button {
+  margin-left: 20px;
+}

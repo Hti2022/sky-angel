@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>天空天使</title>
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <script src="./src/main.js" type="module"></script>
+</head>
+<body>
+<div id="root">
+  <div id="game-guide" class="game-dialog">
+    <section>
+      <h1 class="align-center">How To Play</h1>
+      <p>1. Move the airplane using the arrows keys;</p>
+      <p>2. The timer present the time lapsed;</p>
+      <p>3. The fuel counter show to remain fuel;</p>
+      <p>
+        4. During the flight, the aircraft need to avoid the birds that are
+        presented in the sky. If the airplane hit a bird, the game is over;
+      </p>
+      <p>5. You can shoot the birds by press space key;</p>
+      <p>
+        6. During the flight, the aircraft need to collect fuel and stars in
+        the sky;
+      </p>
+      <p>
+        7. You can pause the game clicking in a button pause, or pressing
+        the space bar.
+      </p>
+      <p>8. Go beyond all limits;</p>
+      <p>Flight in Sky Angel Challenge...</p>
+    </section>
+    <section class="align-center">
+      <button type="button" id="start" class="btn">START</button>
+      <button type="button" id="history" class="btn">History</button>
+    </section>
+  </div>
+  <div id="game-chunk" class="hidden">
+    <div id="plane"></div>
+    <div id="duration">00:00</div>
+    <div id="status">
+      <div>
+        <i class="fuels"></i>
+        <span id="fuels"></span>
+      </div>
+      <div>
+        <i class="stars"></i>
+        <span id="stars"></span>
+      </div>
+    </div>
+    <div id="controls">
+      <button type="button" id="size-decrement" class="btn">Font-</button>
+      <button type="button" id="size-increment" class="btn">Font+</button>
+      <button type="button" id="toggle-mute" class="btn">Mute</button>
+      <button type="button" id="toggle-running" class="btn">Pause</button>
+    </div>
+    <div id="container"></div>
+  </div>
+  <div id="game-ending" class="game-dialog align-center hidden">
+    <section>
+      <h1>Game Over</h1>
+      <p id="stat-time"></p>
+      <p id="stat-stars"></p>
+      <p id="stat-killed"></p>
+    </section>
+    <section>
+      <button type="button" id="replay" class="btn">REPLAY</button>
+    </section>
+  </div>
+  <div id="game-history" class="game-dialog align-center hidden">
+    <section>
+      <h1>History</h1>
+      <ul id="history-list"></ul>
+    </section>
+    <section>
+      <button type="button" id="close-history" class="btn">Return</button>
+    </section>
+  </div>
+</div>
+</body>
+</html>
