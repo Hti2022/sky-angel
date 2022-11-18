@@ -4,4 +4,4 @@
 
 ## How to play
 
-[gh-pages](https://chiyukikana.github.io/)
+[cloud.tencent.com](https://sky-angel-7gsrqpwq5bd87576-1256732922.ap-shanghai.app.tcloudbase.com/)
